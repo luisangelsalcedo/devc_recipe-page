@@ -21,6 +21,8 @@
     flex-direction: column;
     justify-content: space-between;
 
+    
+
     &-header{
         padding-top: pxToRem(32);
         h1{
@@ -151,19 +153,53 @@ main{
                 margin-bottom: pxToRem(24);
             }
         }
-    }
-
-    
+    }    
 }
 
 .source{
     color: $grey4;
     font-size: pxToRem(12);
+    margin-bottom: pxToRem(120);
     a{
         display: block;
         color: inherit;
         text-decoration: none;
         font-size: inherit;
+    }
+}
+
+aside{
+    margin: pxToRem(15) 0 pxToRem(10) 0;
+    & > div{
+        display: flex;
+
+        &:first-child{
+            dl{
+                color: $orange;
+            }
+        }
+
+        dl{
+            flex-shrink: 0;
+            width: 33.3%;
+            display: flex;
+            align-items: center;
+            color: $grey1;
+            margin-bottom: pxToRem(27);
+            
+            dt{
+                margin-right: pxToRem(5);
+                flex-shrink: 0;
+            }
+            dd{
+                font-size: pxToRem(10);
+                b{
+                    font-size: pxToRem(8);
+                    color: $grey4;
+                    display: block
+                }
+            }
+        }
     }
 }
 

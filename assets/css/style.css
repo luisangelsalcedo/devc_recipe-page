@@ -115,12 +115,36 @@ main section article h3 {
 
 .source {
   color: #BDBDBD;
-  font-size: 0.75rem; }
+  font-size: 0.75rem;
+  margin-bottom: 7.5rem; }
   .source a {
     display: block;
     color: inherit;
     text-decoration: none;
     font-size: inherit; }
+
+aside {
+  margin: 0.9375rem 0 0.625rem 0; }
+  aside > div {
+    display: flex; }
+    aside > div:first-child dl {
+      color: #F2994A; }
+    aside > div dl {
+      flex-shrink: 0;
+      width: 33.3%;
+      display: flex;
+      align-items: center;
+      color: #333;
+      margin-bottom: 1.6875rem; }
+      aside > div dl dt {
+        margin-right: 0.3125rem;
+        flex-shrink: 0; }
+      aside > div dl dd {
+        font-size: 0.625rem; }
+        aside > div dl dd b {
+          font-size: 0.5rem;
+          color: #BDBDBD;
+          display: block; }
 
 footer {
   color: #828282;
