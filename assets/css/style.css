@@ -54,8 +54,33 @@ main .ingredients {
       font-size: 0.875rem; }
       main .ingredients li label span {
         line-height: 1.5625rem; }
-      main .ingredients li label input {
-        margin-right: 0.5rem; }
+      main .ingredients li label input[type=checkbox] {
+        display: none; }
+        main .ingredients li label input[type=checkbox] + div {
+          width: 21px;
+          height: 21px;
+          border-radius: 4px;
+          flex-shrink: 0;
+          border: solid 2px #828282;
+          margin-right: 0.5rem;
+          background-size: cover;
+          overflow: hidden;
+          position: relative; }
+          main .ingredients li label input[type=checkbox] + div::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            background: url(../svgs/icon-check.svg) no-repeat center center;
+            background-size: cover;
+            transition: opacity .2s ease, transform .2s ease;
+            opacity: 0;
+            transform: rotate(-90deg) scale(0.5); }
+        main .ingredients li label input[type=checkbox]:checked + div:before {
+          opacity: 1;
+          transform: rotate(0) scale(1); }
+        main .ingredients li label input[type=checkbox]:checked + div + span {
+          text-decoration: line-through; }
   main .ingredients article {
     margin-bottom: 2.625rem; }
 main .instructions dl {
