@@ -17,10 +17,13 @@ ul {
 
 .container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 969px;
   padding: 0 0.75rem;
   position: relative;
   margin: auto; }
+  @media (min-width: 615px) {
+    .container {
+      padding: 0 1.5rem; } }
 
 .page {
   min-height: 100vh;
@@ -29,21 +32,50 @@ ul {
   justify-content: space-between; }
   .page-header {
     padding-top: 2rem; }
+    @media (min-width: 615px) {
+      .page-header {
+        margin-bottom: 1.875rem; } }
+    @media (min-width: 750px) {
+      .page-header {
+        margin-bottom: 3rem; } }
     .page-header h1 {
       font-size: 1.5rem;
       margin-bottom: 0.75rem; }
+      @media (min-width: 615px) {
+        .page-header h1 {
+          font-size: 1.875rem; } }
+      @media (min-width: 750px) {
+        .page-header h1 {
+          font-size: 3rem; } }
     .page-header p {
       width: 320px;
       position: relative;
       font-size: 0.75rem;
       padding-left: 1.5rem;
       margin-bottom: 1.5rem; }
+      @media (min-width: 615px) {
+        .page-header p {
+          width: 592px;
+          font-style: italic; } }
+      @media (min-width: 750px) {
+        .page-header p {
+          font-size: 0.875rem; } }
       .page-header p img {
         position: absolute;
         left: 0; }
     .page-header-image {
       width: 100%; }
+  @media (min-width: 615px) {
+    .page > .container {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between; } }
 
+@media (min-width: 750px) {
+  main {
+    width: 599px;
+    padding-right: 1.25rem;
+    margin-bottom: 3.5625rem; } }
 main .ingredients {
   color: #333; }
   main .ingredients li {
@@ -52,8 +84,13 @@ main .ingredients {
       display: flex;
       align-items: flex-start;
       font-size: 0.875rem; }
+      @media (min-width: 750px) {
+        main .ingredients li label {
+          font-size: 1rem; } }
       main .ingredients li label span {
         line-height: 1.5625rem; }
+      main .ingredients li label i {
+        font-weight: 500; }
       main .ingredients li label input[type=checkbox] {
         display: none; }
         main .ingredients li label input[type=checkbox] + div {
@@ -112,6 +149,13 @@ main section article h3 {
   font-style: italic;
   font-weight: 400;
   margin-bottom: 1.5rem; }
+@media (min-width: 750px) {
+  main section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem; }
+  main section article h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1.875rem; } }
 
 .source {
   color: #BDBDBD;
@@ -122,29 +166,61 @@ main section article h3 {
     color: inherit;
     text-decoration: none;
     font-size: inherit; }
+  @media (min-width: 615px) {
+    .source a {
+      display: inline; } }
+  @media (min-width: 750px) {
+    .source {
+      font-size: 1rem; } }
 
 aside {
   margin: 0.9375rem 0 0.625rem 0; }
-  aside > div {
+  aside .details > section {
     display: flex; }
-    aside > div:first-child dl {
+    aside .details > section:first-child dl {
       color: #F2994A; }
-    aside > div dl {
+    aside .details > section dl {
       flex-shrink: 0;
       width: 33.3%;
       display: flex;
       align-items: center;
       color: #333;
       margin-bottom: 1.6875rem; }
-      aside > div dl dt {
+      aside .details > section dl dt {
         margin-right: 0.3125rem;
         flex-shrink: 0; }
-      aside > div dl dd {
+        aside .details > section dl dt img {
+          width: 17px;
+          height: 17px; }
+      aside .details > section dl dd {
         font-size: 0.625rem; }
-        aside > div dl dd b {
+        aside .details > section dl dd b {
           font-size: 0.5rem;
           color: #BDBDBD;
           display: block; }
+  @media (min-width: 615px) {
+    aside .details {
+      width: 150px;
+      padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 0.75rem; }
+      aside .details > section {
+        flex-direction: column; }
+        aside .details > section dl {
+          width: 100%; } }
+  @media (min-width: 750px) {
+    aside .details {
+      width: 216px;
+      padding: 3.5625rem 2.5rem 3.0625rem 2.5rem; }
+      aside .details > section dl dt {
+        margin-right: 0.84375rem; }
+        aside .details > section dl dt img {
+          width: 34px;
+          height: 34px; }
+      aside .details > section dl dd {
+        font-size: 0.875rem; }
+        aside .details > section dl dd b {
+          font-size: 0.625rem; } }
 
 footer {
   color: #828282;
